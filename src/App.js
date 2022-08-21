@@ -52,12 +52,12 @@ function App() {
                         </select>
                         <hr />
                         <div>
-                            <label>My money</label>
+                            <label>My money : </label>
                             <input placeholder="My Money" onChange={onMoney} value={myMoney} type="number" />
                         </div>
                         <br />
                         <div>
-                            <label>Get coin</label>
+                            <label>Get coin : </label>
                             <input placeholder="Get Coin" value={resultCoin} type="number" disabled />
                         </div>
                     </form>
