@@ -18,7 +18,7 @@ function App() {
 
     const onSelect = (e) => {
         const price = coins[e.target.selectedIndex - 1].quotes.USD.price;
-        setChangeCoin(Math.ceil(price));
+        setChangeCoin(parseFloat(price));
     };
 
     useEffect(() => {
@@ -57,7 +57,7 @@ function App() {
                         </div>
                         <br />
                         <div>
-                            <label>Get coin : </label>
+                            <label>Get coin :</label>
                             <input placeholder="Get Coin" value={resultCoin} type="number" disabled />
                         </div>
                     </form>
