@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -35,10 +36,10 @@ function App() {
     }, []);
 
     return (
-        <div>
+        <div className="wrap">
             <h1>The conins! {loading ? "" : `(${coins.length})개`}</h1>
             {loading ? (
-                <strong>Loading....</strong>
+                <p>Loading....</p>
             ) : (
                 <>
                     <form>
@@ -50,13 +51,12 @@ function App() {
                                 </option>
                             ))}
                         </select>
-                        <hr />
-                        <div>
+                        <div className="my_money">
                             <label>My money : </label>
                             <input placeholder="My Money" onChange={onMoney} value={myMoney} type="number" />
                         </div>
                         <br />
-                        <div>
+                        <div className="get_coin">
                             <label>Get coin :</label>
                             <input placeholder="Get Coin" value={resultCoin} type="number" disabled />
                         </div>
